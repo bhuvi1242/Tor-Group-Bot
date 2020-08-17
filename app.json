@@ -1,0 +1,115 @@
+{
+	"name": "Tor-Group-Bot",
+	"description": "All in One Telegram Bot",
+	"repository": "https://github.com/Nenokkadine/Tor-Group-Bot",
+	"keywords": ["Tor","Bot"],
+	"env": {
+		"BOT_TOKEN": {
+			"description": "Get from Telegram Botfather"
+		},
+		"OWNER_ID": {
+			"description": "get from telegram get_id_bot"
+		},
+		"GDRIVE_FOLDER_ID": {
+			"description": "Google Drive Folder ID. If this is a Team Drive dont forget to set IS_TEAM_DRIVE to True"
+		},
+		"TELEGRAPH_TOKEN": {
+			"description": "Get it by Running generate_telegraph_token.py in your PC itself"
+		},
+		"DOWNLOAD_DIR": {
+			"description": "Directory Where Downloaded Files to be stored",
+			"value": "/home/username/mirror-bot/downloads"
+		},
+		"DOWNLOAD_STATUS_UPDATE_INTERVAL": {
+			"description": "Status Update Interval While Downloading",
+			"value": "5"
+		},
+		"AUTO_DELETE_MESSAGE_DURATION": {
+			"description": "Auto Message Delete Duration",
+			"value": "20"
+		},
+		"IS_TEAM_DRIVE": {
+			"description": "If Team Drive Set this to True",
+			"required": false
+		},
+		"INDEX_URL": {
+			"description": "if you use a G-Index Enter the URL without a Trailing /",
+			"required": false
+		},
+		"USER_SESSION_STRING": {
+			"description": "Get this by running generate_string_session.py"
+		},
+		"TELEGRAM_API": {
+			"description": "Telegram API app ID"
+		},
+		"TELEGRAM_HASH": {
+			"description": "Telegram API app Hash"
+		},
+		"USE_SERVICE_ACCOUNTS": {
+			"description": "Give this True if you use Service Accounts Instead of Refresh Token",
+			"required": false
+		},
+		"MEGA_API_KEY": {
+			"description": "MEGA API KEY",
+			"required": false
+		},
+		"MEGA_EMAIL_ID": {
+			"description": "Mega Email Address",
+			"required": false
+		},
+		"MEGA_PASSWORD": {
+			"description": "Mega Password",
+			"required": false
+		},
+		"STOP_DUPLICATE_MIRROR": {
+			"description": " if this field is set to True , bot will check file in drive(With the File Name Only), if it is present in drive, downloading will Be stopped.",
+			"required": false
+		},
+		"SA_ZIP_URL": {
+			"description": "If USE_SERVICE_ACCOUNTS is Given true. Service Accounts ZIP URL.It Should be Zipped Such that it should have a folder named accounts with SA in it ",
+			"required": false
+		},
+		"BUTTON_THREE_NAME": {
+			"description": "Add External Buttons",
+			"required": false
+		},
+		"BUTTON_THREE_URL": {
+			"description": "Add External Buttons",
+			"required": false
+		},
+		"BUTTON_FOUR_NAME": {
+			"description": "Add External Buttons",
+			"required": false
+		},
+		"BUTTON_FOUR_URL": {
+			"description": "Add External Buttons",
+			"required": false
+		},
+		"BUTTON_FIVE_NAME": {
+			"description": "Add External Buttons",
+			"required": false
+		},
+		"BUTTON_FIVE_URL": {
+			"description": "Add External Buttons",
+			"required": false
+		},
+		"TOKEN_PICKLE_URL": {
+			"description": "if You are Not Using Service Accounts. Give a link to token.pickle generated. Probably G-Index Link is Recommended",
+			"required": false
+		},
+		"MAX_CONCURRENT_DOWNLOADS": {
+			"description": "Maximum Simultaneous Downloads Default is 4",
+			"value": "4"
+		},
+		"AUTH_CHATS": {
+			"description": "give your Authorised chat ID's By giving \n in between them"
+		}
+	},
+    	"formation": {
+        	"worker": {
+            		"quantity": 1,
+            		"size": "free"
+       		 }
+    	},
+	"stack": "container"
+}
