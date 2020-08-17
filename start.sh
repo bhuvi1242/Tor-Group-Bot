@@ -23,11 +23,11 @@ echo ""BOT_TOKEN = "\"$BOT_TOKEN\"
 "BUTTON_FIVE_NAME = "\"$BUTTON_FIVE_NAME\"
 "BUTTON_FIVE_URL = "\"$BUTTON_FIVE_URL\" " >> config.env
 echo -e $AUTH_CHATS >> authorized_chats.txt
-if [ $USE_SERVICE_ACCOUNTS = "True" ]
+if [ $USE_SERVICE_ACCOUNTS == "True" ]
 then
 	wget -q $SA_ZIP_URL -O accounts.zip
 	unzip -qq accounts.zip -d ./
 else
 	wget -q $TOKEN_PICKLE_URL
-fi	
+fi
 ./aria.sh; python3 -m bot
